@@ -1,0 +1,167 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+
+\documentclass{jxustbeamer}
+\usetheme{PaloAlto}%这些是我喜欢的主题：Berkeley,CambridgeUS,Copenhagen,Hannover,Madrid,PaloAlto
+\title{JXUST答辩模板示例}
+\author{死抠\thanks{github ID:\,sikouhjw}}
+\institute{\LaTeX{}学院}
+\date{\scriptsize {\today}}
+%\titlegraphic{\includegraphics[width=0.20\textwidth]{jxust.jpg}%在第一页产生大的校徽
+\logo{\includegraphics[width=1.3cm,height=1.3cm]{jxust}}%控制每页都产生校徽
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+    \begin{frame}{目录}
+    	 \tableofcontents[hideallsubsections]
+    \end{frame}
+
+\section{模板基本介绍}
+    \begin{frame}{模板基本介绍}
+        本模板是为江西理工大学数学建模竞赛答辩准备的，为了让我自己方便答辩，我编写了这个模板。
+        
+        要使用本模板的同学应该要阅读过 lshort-zh\cite{lshort-zh} 或者 \LaTeX{}入门\cite{刘海洋}的大部分内容, 会使用\LaTeX{}的基本命令，能够用\LaTeX{}编写自己的文档。
+        
+        因为我没答辩过，不知道示例要有什么内容，所以我只是把功能罗列了一遍。
+    \end{frame}
+\section{基本使用}
+\subsection{更换主题}
+\begin{frame}{更换主题}
+	本模板在导言区注释了一部分的主题，读者可根据自身需要选择，也可用\LaTeX{}入门\cite{刘海洋}里的主题或者beamer宏包手册里的主题。
+\end{frame}
+\subsection{抄录命令的使用}
+    \begin{frame}[fragile]{抄录命令的使用}
+    %注意此处verbatim内的内容最左边不能有空格
+\begin{verbatim}
+若在一帧中有抄录环境，务必加上[fragile]
+示例：
+\ begin{frame}[fragile]{这是一个例子}
+这是一个例子，\与begin之间不应该有空格，但是没空格会报错
+\ end{frame}
+\end{verbatim}
+    \end{frame}
+\subsection{数学公式}
+\begin{frame}[fragile]{数学公式}
+
+计算 $\displaystyle\lim_{(m,n)\to(+\infty,+\infty)}\sum_{j=1}^{m}\sum_{i=1}^{n}\frac{(-1)^{i+j}}{i+j}$
+
+\end{frame}
+\subsection{重新定义}
+\begin{frame}[fragile]{重新定义}
+	\begin{figure}[h]
+		\begin{tabular}{|c|c|}
+			\hline
+			原命令 & 重新定义后\\
+			\hline
+			\verb|$\mathrm{d}$| & \verb|\dd|\\
+			\hline
+			\verb|$\mathrm{e}$| & \verb|\ee|\\
+			\hline
+			\verb|$\mathrm{i}$| & \verb|\ii|\\
+			\hline
+		\end{tabular}
+	\end{figure}
+\end{frame}
+\subsection{图片的插入}
+\begin{frame}{图片的插入}
+	图片请放在figures文件夹中
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.20\textwidth]{jxust.jpg}
+	\end{figure}
+	
+\end{frame}
+\subsection{列表的使用}
+\begin{frame}{列表的使用}
+	\begin{enumerate}
+		\item 这是1
+		\item 这是2
+		\begin{enumerate}
+			\item 这是嵌套了一次
+		\end{enumerate}
+	\end{enumerate}
+\end{frame}
+
+\subsection{彩色}
+\begin{frame}{彩色}
+	\textcolor{red}{这是红色}
+	
+	\textcolor{blue}{这是蓝色}
+	
+	\colorbox{yellow}{黄色盒子}
+	
+	\fcolorbox{black}{green}{黑框绿盒子}
+\end{frame}
+
+\subsection{盒子}
+\begin{frame}{盒子}
+	\begin{block}{蓝色}
+		我是盒子
+	\end{block}
+
+    \begin{alertblock}{红色}
+    	我也是盒子
+    \end{alertblock}
+
+    \begin{exampleblock}{绿色}
+    	巧了你们俩也是盒子
+    \end{exampleblock}
+\end{frame}
+
+\subsection{代码环境}
+\begin{frame}[fragile]{代码环境}
+	matlab代码环境
+\begin{lstlisting}[language=matlab]
+rand('state',sum(clock)); % 初始化随机数发生器
+p0=0;
+tic % 计时开始
+for i=1:10^6
+x=randi([0,99],1,5); % 产生一行五列的区间[0,99]上的随机整数
+[f,g]=mengte(x);
+if all(g<=0)
+if p0<f
+x0=x; p0=f; % 记录下当前较好的解
+end
+end
+end
+x0,p0
+toc % 计时结束
+\end{lstlisting}
+\end{frame}
+\section{参考文献}
+\begin{frame}{参考文献}
+	\begin{thebibliography}{99}
+		\bibitem{lshort-zh} China\TeX{} 论坛, 《 一份不太简短的 \LaTeXe{} 介绍》 (lshort-zh).
+		\bibitem{刘海洋} 刘海洋. LaTeX入门. 北京：电子工业出版社, 2013.
+	\end{thebibliography}
+\end{frame}
+\section{致谢}
+\begin{frame}{致谢}
+    \begin{block}{队友}
+    	\centering
+    	感谢我的队友lrc和jzw
+    \end{block}
+    \pause
+    \begin{block}{老师}
+    	\centering
+    	感谢我的指导老师yhb
+    \end{block}
+    \pause
+    \begin{block}{\LaTeX{}指导}
+    	\centering
+    	感谢xaj在\LaTeX{}上的指导
+    \end{block}
+    \pause
+	\begin{center}
+		志存高远\hspace{1pc}责任为先
+	\end{center}
+    \pause
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.15\textwidth]{jxust.jpg}
+    \end{figure}
+\end{frame}
+\end{document}

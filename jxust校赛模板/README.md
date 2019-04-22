@@ -1,4 +1,6 @@
-为了jxust全校大学生数学建模竞赛做的模板
+为了jxust全校大学生数学建模竞赛做的模板，包含两部分：jxustbeamer和jxustmodeling.
+
+jxustbeamer是用于答辩，jxustmodeling是用于写论文.
 
 郑重声明
 
