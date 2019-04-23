@@ -62,7 +62,7 @@
 	section={%设置 section 格式
 		format={\zihao{-3}\heiti\centering},%小三号黑体字居中
 		name={第,章},%第X章
-		aftername={\hspace{12bp}},%修改序号和标题直接的间距(空两格)
+		aftername={\hspace{24bp}},%修改序号和标题直接的间距(空两格)
 		number=\chinese{section},%设置序号为中文
 		%beforeskip=30pt,%设置章节标题前的垂直间距
 		%fixskip=true,
@@ -76,3 +76,6 @@
 	},
 	appendix/name={附\hspace{12bp}录},%在附录序号前添加 "附  录"
 }
+
+%定制目  录
+\renewcommand\contentsname{目\hspace{24bp}录}
