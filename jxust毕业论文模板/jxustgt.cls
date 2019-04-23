@@ -24,7 +24,14 @@
 	enumerate,% 列表 宏包
 	caption,  % 标题控制 宏包
 	ulem,     % 下划线 宏包
+	hyperref, % 超链接等 宏包
+	titlesec, %定制目录标题 宏包
+	titletoc, %定制目录标题 宏包
 }
+
+%
+
+%\titlecontents{section}[\hspace{12bp}]{\zihao{-3}\songti}{\contentslabel{2.846cm}}{}{{\titlerule*[0.5pc]{$\cdot$}\contentspage\hspace*{3cm}}}
 
 %设置虚数,自然底数,微分符号
 \newcommand{\dd}{\,\mathrm{d}}
