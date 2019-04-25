@@ -27,6 +27,7 @@
 	hyperref, % 超链接等 宏包
 	titlesec, %定制目录标题 宏包
 	titletoc, %定制目录标题 宏包
+	%tocloft,  %控制目录 宏包
 }
 
 %
