@@ -1,0 +1,208 @@
+\documentclass{ctexart}
+\usepackage{amsmath,ctex,caption,multirow,hyperref,newfloat}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=0cm,bottom=0cm]{geometry}
+\renewcommand{\rm}{\,\mathrm}
+\DeclareFloatingEnvironment[within=section]{表}
+\hypersetup{
+	bookmarks=true,
+	bookmarksopen=true
+}
+
+\title{模电数电实验数据}
+\date{\today}
+\author{死抠}
+\begin{document}
+	\maketitle
+	\tt{数据仅作学习参考用途，用作实验报告后果自负。}
+	\section{模拟电子技术实验数据}
+	\subsection{模电实验一\quad 常用电子仪器使用练习}
+	\begin{表}[h]
+		\centering
+		\caption{万用表、示波器测量电压实验数据}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			稳压源表头指示 & $6\rm{V}$ & $12\rm{V}$ & $18\rm{V}$ & $24\rm{V}$ & $30\rm{V}$\\
+			\hline
+			万用表读数 & $6.03$ & $12.03$ & $18.02$ & $24.00$ & $30.00$\\
+			\hline
+			示波器读数 & & & & &\\
+			\hline
+		\end{tabular}
+	\end{表}
+    \begin{表}[h]
+    	\centering
+    	\caption{示波器测量电压实验数据}
+    	\begin{tabular}{|c|c|c|c|c|}
+    		\hline
+    		校正信号 & 标称值 & \multicolumn{2}{|c|}{示波器测得的原始数据} & 测量值\\
+    		\hline
+    		幅度 $U_{P-P}$ & $2\rm{V}$ & $3.5\rm{div}$ & $0.5\rm{V/div}$ & $1.75\rm{V}$\\
+    		\hline
+    		频率 $f$ & $1000\rm{Hz}$ & $4\rm{div}$ & $0.25\rm{ms/div}$ & $1\rm{Hz}$\\
+    		\hline
+    	\end{tabular}
+    \end{表}
+    \begin{表}[h]
+    	\centering
+    	\caption{交流电压测量}
+    	\begin{tabular}{|c|c|c|c|c|c|}
+    		\hline
+    		\multirow{2}*{信号电压频率} & \multicolumn{2}{|c|}{示波器测量值} & \multirow{2}*{信号电压毫伏表读数$/\rm{V}$} & \multicolumn{2}{|c|}{示波器测量值}\\
+    		 \cline{2-3}\cline{5-6}
+    		 & 周期$/\rm{ms}$ & 频率$/\rm{Hz}$ & & 峰峰值$/\rm{V}$ & 有效值$/\rm{V}$\\
+    		 \hline
+    		 $50\rm{Hz}$ & $20$ & $50.00$ & $0.896$ & $2.58$ & $0.912$\\
+    		 \hline
+    		 $100\rm{Hz}$ & $10$ & $100.00$ & $0.900$ & $2.48$ & $0.877$\\
+    		 \hline
+    		 $1\rm{kHz}$ & $1$ & $1.00\times10^3$ & $0.893$ & $2.50$ & $0.905$\\
+    		 \hline
+    		 $10\rm{kHz}$ & $99.92\times10^{-3}$ & $10.01\times10^3$ & $0.571$ & $2.56$ & $0.905$\\
+    		 \hline
+    	\end{tabular}
+    \end{表}
+
+    \subsection{模电实验二\quad 共射单管交流放大电路}
+    \begin{表}[h]
+    	\centering
+    	\caption{静态工作点测试表}
+    	\begin{tabular}{|c|c|c|c|c|c|c|}
+    		\hline
+    		\multicolumn{4}{|c|}{测量值} & \multicolumn{3}{|c|}{计算值}\\
+    		\hline
+    		$U_{\rm{B}}$ & $U_{\rm{C}}$ & $U_{\rm{E}}$ & $R_{\rm{b}}$ & $U_{\rm{BE}}$ & $U_{\rm{CE}}$ & $I_{\rm{CQ}}$\\
+    		\hline
+    		$0.642$ & $5.07$ & $0$ & $687$ & & &\\
+    		 \hline
+    	\end{tabular}
+    \end{表}
+    \begin{表}[h]
+    	\centering
+    	\caption{电压放大倍数测试表}
+    	\begin{tabular}{|c|c|c|}
+    		\hline
+    		\multicolumn{2}{|c|}{测量值} & 计算值\\
+    		\hline
+    		$V_{\rm{i}}/\rm{mV}$ & $V_{\rm{o}}/\rm{V}$ & $A_{\rm{V}}$\\
+    		\hline
+    		$12$ & $2.618$ & \\
+    		\hline
+    		$14$ & $2.988$ & \\
+    		\hline
+    		$16$ & $3.268$ & \\
+    		\hline
+    		$20$ & $3.671$ & \\
+    		\hline
+    	\end{tabular}
+    \end{表}
+    \begin{表}[h]
+    	\centering
+    	\caption{电路参数变化对电压放大倍数及输出波形的影响}
+    	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    		\hline
+    		\multicolumn{3}{|c|}{给定参数} & \multicolumn{3}{|c|}{测量结果} & \multicolumn{3}{|c|}{由测量值计算} & \multirow{2}*{波形失真类型}\\
+    		\cline{1-9}
+    		$R_{\rm{b}}$ & $R_{\rm{C}}/\rm{k}\Omega$ & $R_{\rm{L}}/\rm{k}\Omega$ & $U_{\rm{CE}}$ & $U_{\rm{O}}$ & 输出波形图 & $I_{\rm{CQ}}$ & $I_{\rm{BQ}}$ & $A_{\rm{U}}$ &\\
+    		\hline
+    		\multirow{3}*{合适} & $3.9$ & $\infty$ & $0.439$ & $3.426$ & 略 & & & & \\
+    		\cline{2-10}
+    		 & $2$ & $2.2$ & $1.800$ & $1.779$ & 略 & & & & \\
+    		\cline{2-10}
+    		 & $2$ & $\infty$ & $3.226$ & $3.241$ & 略 & & & & \\
+    		\hline
+    		变小 & \multicolumn{2}{|c|}{$R_{\rm{C}}=2\rm{k}\Omega$} & $2.732$ & $2.320$ & 略 & & & & \\
+    		\cline{1-1}\cline{4-10}
+    		变大 & \multicolumn{2}{|c|}{$R_{\rm{L}=\infty}$} & $5.26$ & $3.20$ & 略 & & & & \\
+    		\hline
+    	\end{tabular}
+    \end{表}
+    %\newpage\newpage
+    \section{数字电子技术实验数据}
+    \subsection{数电实验一\quad 门电路}
+    \begin{表}[h]
+    	\centering
+    	\caption{$\rm{TTL}$ 基本门电路测试表}
+    	\begin{tabular}{|c|c|c|c|c|}
+    		\hline
+    		\multicolumn{2}{|c|}{输入} & \multicolumn{3}{|c|}{输出}\\
+    		\hline
+    		$A$ & $B$ & 与非门$Y$ & 或门$Y$ & 异或门$Y$\\
+    		\hline
+    		$0$ & $0$ & $1$ & $0$ & $0$\\
+    		\hline
+    		$0$ & $1$ & $1$ & $1$ & $1$\\
+    		\hline
+    		$1$ & $0$ & $1$ & $1$ & $1$\\
+    		\hline
+    		$1$ & $1$ & $0$ & $1$ & $0$\\
+    		\hline
+    	\end{tabular}
+    \end{表}
+    \begin{表}[h]
+    	\centering
+    	\caption{$\rm{TTL}$四输入端双与非门测试表}
+    	\begin{tabular}{|c|c|c|c|c|c|}
+    		\hline
+    		\multicolumn{4}{|c|}{输入} & \multicolumn{2}{|c|}{输出}\\
+    		\hline
+    		$A$ & $B$ & $C$ & $D$ & $Y$ & 电压$/\rm{V}$\\
+    		\hline
+    		$1$ & $1$ & $1$ & $1$ & $0$ & $0.03$\\
+    		\hline
+    		$0$ & $1$ & $1$ & $1$ & $1$ & $4.40$\\
+    		\hline
+    		$0$ & $0$ & $1$ & $1$ & $1$ & $4.40$\\
+    		\hline
+    		$0$ & $0$ & $0$ & $1$ & $1$ & $4.41$\\
+    		\hline
+    		$0$ & $0$ & $0$ & $0$ & $1$ & $4.40$\\
+    		\hline
+    	\end{tabular}
+    \end{表}
+    \begin{表}[h]
+    	\centering
+    	\caption{$\rm{TTL}$与非门的电压传输特性测试表}
+    	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    		\hline
+    		$V_{\mathrm{i}}/\rm{V}$ & $0$ & $1$ & $2$ & $2.5$ & $2.6$ & $2.8$ & $2.9$ & $3$\\
+    		\hline
+    		$V_{\mathrm{o}}/\rm{V}$ & $4.85$ & $4.85$ & $4.85$ & $2.30$ & $0.02$ & $0.02$ & $0.02$ & $0.02$\\
+    		\hline
+    	\end{tabular}
+    \end{表}
+
+    \subsection{数电实验二\quad 译码器}
+    \begin{表}[h]
+    	\centering
+    	\caption{$74\rm{LS}138$的逻辑功能测试表}
+    	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    		\hline
+    		\multicolumn{5}{|c|}{输入} & \multicolumn{8}{|c|}{\multirow{2}*{输出}}\\
+    		\cline{1-5}
+    		\multicolumn{2}{|c|}{允许} & \multicolumn{3}{|c|}{选择} & \multicolumn{8}{|c|}{}\\
+    		\hline
+    		$S1$ & $S2'+S3'$ & $A2$ & $A1$ & $A0$ & $Y0'$ & $Y1'$ & $Y2'$ & $Y3'$ & $Y4'$ & $Y5'$ & $Y6'$ & $Y7'$\\
+    		\hline
+    		X & 1 & X & X & X & & & & & & & &\\
+    		\hline
+    		0 & X & X & X & X & & & & & & & &\\
+    		\hline
+    		1 & 0 & 0 & 0 & 0 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 0 & 0 & 1 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 0 & 1 & 0 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 0 & 1 & 1 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 1 & 0 & 0 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 1 & 0 & 1 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 1 & 1 & 0 & & & & & & & &\\
+    		\hline
+    		1 & 0 & 1 & 1 & 1 & & & & & & & &\\
+    		\hline
+    	\end{tabular}
+    \end{表}
+\end{document}
