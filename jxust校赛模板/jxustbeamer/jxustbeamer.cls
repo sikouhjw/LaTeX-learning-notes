@@ -16,6 +16,7 @@ tabularx, % 表格 宏包
 xcolor,   % 彩色 宏包
 listings, % 代码抄录 宏包
 enumerate,% 列表 宏包
+hyperref, % 超链接 宏包
 }
 
 

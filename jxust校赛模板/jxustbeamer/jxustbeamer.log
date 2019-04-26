@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.18)  26 APR 2019 15:02
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.18)  26 APR 2019 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2020,8 +2020,8 @@ File: figures/jxust.png Graphic file (type bmp)
  [7
 
 ]
-File: figures/jxust.jpg Graphic file (type bmp)
-<figures/jxust.jpg>
+File: figures/jxust.png Graphic file (type bmp)
+<figures/jxust.png>
 File: figures/jxust.png Graphic file (type bmp)
 <figures/jxust.png>
  [8
@@ -2091,36 +2091,36 @@ File: figures/jxust.png Graphic file (type bmp)
  [13
 
 ]
-File: figures/jxust.jpg Graphic file (type bmp)
-<figures/jxust.jpg>
+File: figures/jxust.png Graphic file (type bmp)
+<figures/jxust.png>
 File: figures/jxust.png Graphic file (type bmp)
 <figures/jxust.png>
  [14
 
 ]
-File: figures/jxust.jpg Graphic file (type bmp)
-<figures/jxust.jpg>
+File: figures/jxust.png Graphic file (type bmp)
+<figures/jxust.png>
 File: figures/jxust.png Graphic file (type bmp)
 <figures/jxust.png>
  [15
 
 ]
-File: figures/jxust.jpg Graphic file (type bmp)
-<figures/jxust.jpg>
+File: figures/jxust.png Graphic file (type bmp)
+<figures/jxust.png>
 File: figures/jxust.png Graphic file (type bmp)
 <figures/jxust.png>
  [16
 
 ]
-File: figures/jxust.jpg Graphic file (type bmp)
-<figures/jxust.jpg>
+File: figures/jxust.png Graphic file (type bmp)
+<figures/jxust.png>
 File: figures/jxust.png Graphic file (type bmp)
 <figures/jxust.png>
  [17
 
 ]
-File: figures/jxust.jpg Graphic file (type bmp)
-<figures/jxust.jpg>
+File: figures/jxust.png Graphic file (type bmp)
+<figures/jxust.png>
 File: figures/jxust.png Graphic file (type bmp)
 <figures/jxust.png>
  [18
@@ -2144,11 +2144,11 @@ Package rerunfilecheck Info: File `jxustbeamer.out' has not changed.
 (rerunfilecheck)             Checksum: 54B0CDB30565915C38ADC5F8B7EB4270.
  ) 
 Here is how much of TeX's memory you used:
- 35520 strings out of 492970
- 722795 string characters out of 6137298
- 872343 words of memory out of 5000000
- 38922 multiletter control sequences out of 15000+600000
- 537800 words of font info for 79 fonts, out of 8000000 for 9000
+ 35519 strings out of 492970
+ 722798 string characters out of 6137298
+ 873479 words of memory out of 5000000
+ 38921 multiletter control sequences out of 15000+600000
+ 537808 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,75p,10504b,2006s stack positions out of 5000i,500n,10000p,200000b,80000s
 
