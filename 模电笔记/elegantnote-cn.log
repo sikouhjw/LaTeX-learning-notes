@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.18)  26 APR 2019 00:22
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.18)  28 APR 2019 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2822,12 +2822,14 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 216.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.2pt on input line 216.
- [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
+File: ./image/fankui2.png Graphic file (type bmp)
+<./image/fankui2.png>
+ [6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
  (./elegantnote-cn.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 225.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
 Package rerunfilecheck Info: File `elegantnote-cn.out' has not changed.
 (rerunfilecheck)             Checksum: BE24BB72331948F5CAF66744CDCF21AB.
 
@@ -2836,12 +2838,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39837 strings out of 492970
- 786600 string characters out of 6137298
- 904770 words of memory out of 5000000
- 43186 multiletter control sequences out of 15000+600000
+ 39861 strings out of 492970
+ 787895 string characters out of 6137298
+ 904772 words of memory out of 5000000
+ 43209 multiletter control sequences out of 15000+600000
  613130 words of font info for 148 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 66i,11n,124p,10445b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,12n,124p,10445b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elegantnote-cn.pdf (6 pages).
+Output written on elegantnote-cn.pdf (7 pages).

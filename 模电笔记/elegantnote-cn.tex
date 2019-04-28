@@ -216,6 +216,31 @@
 	$\oplus-\oplus$\footnote{这里的$\oplus,\circleddash$应理解为前者是输入量，后者是反馈量，$\oplus$是正的，$\circleddash$是负的}常为串联，$\oplus+\circleddash$常为并联\\
 	这是容易记忆的，只需判断是什么采样，是串联\footnote{以电压方式相叠加，反之亦然}或者并联反馈，再判断是正负反馈和交直流反馈，就可以组成名词：直流电压并联负反馈。
 \end{note}
+\begin{proposition}[关于负反馈]
+	关于负反馈，它会使输出电阻产生变化，进而达到更好的产品要求。
+	\begin{itemize}
+		\item 电压负反馈：减小输出电阻 $\to$ 增强带负载能力。
+		\item 电流负反馈：增强输出电阻 $\to$ 减小带负载能力。
+	\end{itemize}
+\end{proposition}
+
+下面我们来分析一下负反馈电路的一般情况，即方块图。
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fankui2.png}
+	\caption{方块图示例}
+\end{figure}
+
+通过电路知识，我们容易得到以下几个等式
+\begin{equation*}
+	\dot X_\mathrm{i}'=\dot X_\mathrm{i}-\dot X_\mathrm{f}
+\end{equation*}
+\begin{definition}[放大倍数]
+	\begin{equation*}
+		\dot{A}=\frac{\dot{X}_{\mathrm{o}}}{\dot{X}_{\mathrm{i}}'}
+	\end{equation*}
+	
+\end{definition}
 
 \section{信号的运算与处理}
 \section{波形的发生和信号的转换}
