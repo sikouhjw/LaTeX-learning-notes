@@ -1,5 +1,12 @@
-\ProvidesClass{JXUSTmodeling}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{JXUSTmodeling}[2019/05/01 version 1.0]
 
+\newif\if@bwprint\@bwprintfalse
+\newif\if@timesfont\@timesfontfalse
+
+\DeclareOption{timesfont}{\@timesfonttrue}
+\DeclareOption{bwprint}{\@bwprinttrue}
+\ProcessOptions\relax
 %设置纸张为A4纸,行距为1.25倍,设置默认字号为小4
 \LoadClass[oneside,a4paper,UTF8,linespread=1.25,zihao=-4]{ctexart}
 
@@ -18,9 +25,9 @@
 %\RequirePackage{mathrsfs}%\mathscr{}调用傅里叶变换,拉普拉斯变换的符号
 
 %设置虚数,自然底数,微分符号
-\newcommand{\dd}{\,\mathrm{d}}
-\newcommand{\ee}{\mathrm{e}}
-\newcommand{\ii}{\mathrm{i}}
+\newcommand*{\dd}{\,\mathrm{d}}
+\newcommand*{\ee}{\mathrm{e}}
+\newcommand*{\ii}{\mathrm{i}}
 
 %载入表格宏包和插图宏包
 \RequirePackage{booktabs,tabularx}
@@ -28,6 +35,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{caption}
 
+\captionsetup{format=hang}%设置浮动体标题悬挂缩进
 
 %定义居中的X列格式
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
@@ -45,24 +53,55 @@
 %载入ulem宏包,提供可断行下划线的命令\uline
 \RequirePackage{ulem}
 
+\if@bwprint\relax
+\else
 %载入颜色宏包
 \RequirePackage{color,xcolor}
+\fi
 
 %载入代码宏包
 \RequirePackage{listings}
+%设置代码的默认样式
 \lstset{	%调用Matlab的默认颜色设置,
-	%language=Matlab,%设置默认语言
 	frame=none,%取消边框
-	breaklines=true,%允许断行
-	%breakatwhitespace=true,%使用此命令经允许在空格处断行
+	breaklines=true,%允许自动断行
+	%breakatwhitespace=true,%使用此命令仅允许在空格处自动断行
+	showstringspaces=false,%不显示字符串中的空格
 	basicstyle=\small\ttfamily,%设置代码基本样式
 	flexiblecolumns=true,%改善字母间距
 	keywordstyle=\color{blue},%设置关键词样式
-%	deletekeywords={disp},%可在此行去除特定关键词的语法高亮
 	stringstyle=\color[rgb]{0.75,0,0.75},%设置字符串样式
 	commentstyle=\songti\color[rgb]{0,0.5,0},%设置注释样式
 	tabsize=4,%设置制表符缩进
 }
+
+%设置matlab代码环境
+\lstnewenvironment{matlab}[1][]{
+	\lstset{
+		language=Matlab,
+	%	deletekeywords={disp},%可在此行去除特定关键词的语法高亮		
+		keywordstyle=\color{blue},%设置关键词样式
+		stringstyle=\color[rgb]{0.75,0,0.75},%设置字符串样式
+		commentstyle=\songti\color[rgb]{0,0.5,0},%设置注释样式
+		#1
+	}
+}{}
+
+%设置python代码环境
+\lstnewenvironment{python}[1][]{
+	\lstset{
+		language=Python,
+		keywordstyle=\color[RGB]{255,119,0},%设置Keywords样式
+		morekeywords={as},%将特定单词加入Kewords中
+		deletekeywords={print},%从keywords中去除特定单词
+		keywordstyle=[2]\color[RGB]{144,0,144},%设置Builtins样式
+		morekeywords=[2]{print},%将特定单词加入Builtins中
+		stringstyle=\color[RGB]{0,170,0},%设置字符串样式
+		commentstyle=\songti\color[RGB]{221,0,0},%设置注释样式	
+		#1
+	}
+}{}
+
 
 %设置章节格式
 \ctexset{
@@ -81,8 +120,13 @@
 		name={},
 		number={\arabic{section}.\arabic{subsection}},	%设置序号格式
 	},
-	appendix/name={附\quad{}录},%在附录序号前添加 "附 录"
+	appendix/name={附\hspace{1em}录},%在附录序号前添加 "附 录"
 }
+
+\if@timesfont
+\setmainfont{Times New Roman}%设置英文字体为Times New Roman
+\fi
+
 
 %重定义封面
 \newcommand*{\authorone}[1]{\gdef\@authorone{#1}}
@@ -99,7 +143,7 @@
 \null\vfil
 \vskip 40\p@ \let \footnote \thanks
 \begin{center}%
-	{\heiti\zihao{3} 题目: \uline{\hspace{3em}\@title\hspace{3em}} \par}%
+	{\heiti\zihao{3} 题目: \underline{\hspace{3em}\@title\hspace{3em}} \par}%
 	\vskip 3em%
 	\includegraphics[width=0.3\textwidth]{\@logo}
 	\vskip 3em
@@ -118,6 +162,31 @@
 \@thanks
 \vfil\null
 \end{titlepage}%
+\setcounter{footnote}{0}
+\global\let\thanks\relax%清楚宏定义
+\global\let\maketitle\relax
+\global\let\@thanks\@empty
+\global\let\@author\@empty
+\global\let\@date\@empty
+\global\let\@title\@empty
+\global\let\@authorone\@empty
+\global\let\@authoroneclass\@empty
+\global\let\@authortwo\@empty
+\global\let\@authortwoclass\@empty
+\global\let\@authorthree\@empty
+\global\let\@authorthreeclass\@empty
+\global\let\@logo\@empty
+\global\let\authorone\relax
+\global\let\authoroneclass\relax
+\global\let\authortwo\relax
+\global\let\authortwoclass\relax
+\global\let\authorthree\relax
+\global\let\authorthreeclass
+\global\let\logo\relax
+\global\let\title\relax
+\global\let\author\relax
+\global\let\date\relax
+\global\let\and\relax
 }
 
 
@@ -127,4 +196,6 @@
 %载入超链接宏包
 \RequirePackage{hyperref}
 \hypersetup{breaklinks,colorlinks}%允许超链接断行,取消超链接的边框,使链接文字带颜色
-%\hypersetup{hidelinks}%取消超链接的颜色
+\if@bwprint
+\hypersetup{hidelinks}%取消超链接的颜色
+\fi

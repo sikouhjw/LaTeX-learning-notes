@@ -1,7 +1,8 @@
 % !TeX program = xelatex
 % !TeX encoding = UTF-8
 
-\documentclass{JXUSTmodeling}
+\documentclass[timesfont,no-math]{JXUSTmodeling}%设置默认英文字体为Times New Roman,但不改变数学字体设置
+%\documentclass[timesfont,bwprint]{JXUSTmodeling}%取消彩色，只使用黑色文本
 
 %\bibliographystyle{plain}
 \renewcommand*{\lstlistingname}{代码}
@@ -24,8 +25,9 @@
 
 	\maketitle%生成标题页
 
+	\newpage
 	\vspace*{\stretch{1}}
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
 		\centering
 		\heiti\zihao{2} {\color{red}郑重声明}
 		
@@ -37,15 +39,26 @@
 		
 		如果是非商业目的,您可以以任意方式使用本模板而无需通知作者.
 		
-		但如果是商业目的,请{\color{red} 重新阅读}此郑重申明.
+		但如果是商业目的,请{\color{red}重新阅读}此郑重申明.
 	\end{figure}
 	\vspace*{\stretch{1}}
 \thispagestyle{empty}
 	
-
-	\newpage
-	\section*{摘\qquad{}要}%摘要页
 	
+	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{摘\hspace{2em}要}
+	\section*{摘\hspace{2em}要}%摘要页
+	{\zihao{4} 本项目已上传至 GitHub, 你可以在 \url{https://github.com/sikouhjw/LaTeX-learning-notes} 获取最新的版本, 或者告知我们你的建议.}
+	
+	\vspace{1em}
+	
+	更新说明: 此次更新设置了添加了文档类选项 timesfont 和 bwprint, 使用 timesfont 选项将设置默认英文字体为 Times New Roman, 使用 
+	 bwprint 选项将全局使用黑色文本. 另外添加了可以直接使用的 matlab 和 python 代码环境, 将摘要和参考文献添加到书签中, 
+	虽然基本的格式都已由 \LaTeX{} 自动完成, 但是各种细致的调整仍需同学们手动进行.
+	
+	\noindent\rule{\textwidth}{1pt}
+
 	本模板是为江西理工大学数学建模竞赛准备的. 为了让写作的同学们把更多精力放在写作的内容上, 
 	而不是论文的格式上, 我编写了这个模板. 要使用本模板的同学应该要阅读过 lshort-zh \cite{lshort-zh} 的大部分内容,
 	会使用 \LaTeX{} 的基本命令, 能够用 \LaTeX{} 编写自己的文档.
@@ -67,12 +80,12 @@
 	
 	本模板用 listings 宏包\cite{listings-package}定制了代码环境, 默认语法高亮的颜色设置与 Matlab 的默认设置一致,
 	但是并未设置代码为 Matlab 代码, 需要同学们手动设置代码类型\footnote{\LaTeX{} 默认的 Matlab 关键词与 Matlab 默认的 Matlab 关键词不同, 如果需要实现和 Matlab 默认一样的效果, 需要额外调整, 调整方法见 \href{JXUSTmodeling.cls}{JXUSTmodeling.cls}.}, 
-	设置实例见代码~\ref{lst:1}.
+	设置实例见附录~\ref{app:2} 代码~\ref{lst:1}.
 	
 	表格推荐使用三线式表格,用 \verb|\toprule| 画表格顶部的水平线,
-	用 \verb|\midrule| 和 \verb|\cmidrule{column1-column2}| 画表格中间的水平线, 用 \verb|\bottomrule| 画
-	表格底部的水平线. 示例代码见代码~\ref{lst:tab},
-	示例输出结果见表~\ref{tab:feature}.
+	用 \verb|\midrule| 和 \lstinline[basicstyle=\ttfamily]|\cmidrule{column1-column2}| 画表格中间的水平线, 用 \verb|\bottomrule| 画
+	表格底部的水平线. 示例代码见附录~\ref{app:2} 代码~\ref{lst:tab},
+	示例输出结果见附录~\ref{app:2} 表~\ref{tab:feature}.
 	
 	虽然基本的格式都已由 \LaTeX{} 自动完成, 但是各种细致的调整仍需同学们手动进行. 
 	
@@ -82,6 +95,21 @@
 	\setcounter{page}{1}%设置页码为1
 	\noindent {\bfseries 关键词}\quad 江西理工大学 \quad \LaTeX{}\quad 数学建模 \quad 
 	\newpage
+	\section*{举个例子}
+	比较一下 \LaTeX{} 和 word 的数学公式效果:
+	\newtheorem*{thm}{Theorem}
+	
+	\begin{thm}[Newton-Leibniz formula]
+	若函数 $f(x)$ 在区间 $[a,b]$ 连续, 且 $F(x)$ 是$f(x)$ 的原函数, 则
+	\[
+		\int_a^b f(x) \dd x= F(b) - F(a) .
+	\]
+	\end{thm}
+	上式是 \LaTeX{} 的数学公式效果, word 的数学公式效果如下图
+	\begin{center}
+	\includegraphics[width=50mm]{BasicTheoremOfCalculus.png}
+	\end{center}
+	
 	
 	\section{问题的提出}\label{sec:1}
 	校级数学建模竞赛即将开始, 数学建模分为三个部分: 建模, 计算, 写作. 其中每个部分都十分重要, 
@@ -169,7 +197,8 @@
 	
 	\lipsum[11-12]
 	
-	
+	 \phantomsection
+	 \addcontentsline{toc}{section}{\refname}
 	\begin{thebibliography}{99}
 		\bibitem{lshort-zh} China\TeX{} 论坛, 《 一份不太简短的 \LaTeXe{} 介绍》 (lshort-zh).
 		\bibitem{ctex-package} \CTeX.ORG,《\CTeX{} 宏集手册》.
@@ -182,8 +211,8 @@
 	
 	\vfill
 
-	\section{Matlab 程序}\label{app:2}
-	\begin{lstlisting}[language={Matlab},showstringspaces=false]
+	\section{Matlab 程序}\label{app:1}
+	\begin{matlab}
 	clc,clear,close
 	t=0:0.1:20;
 	r=exp(-0.2*t);
@@ -201,17 +230,24 @@
 	plot3(x,y,z);
 	axis([-1,1,-1,1,0,4]);
 	grid on;
-	\end{lstlisting}
+	\end{matlab}
 	\vfill
 	\clearpage
 	
-	\section{\LaTeX{} 程序}\label{app:1}
+	\section{Python 程序}\label{app:2}
+	\begin{python}
+	for i in range(3):
+		print('The cover is not so good that I think we should redefine it!')
+	print('We have no ability to do it! We need help!')
+	\end{python}
+	
+	\section{\LaTeX{} 程序}\label{app:3}
 	\subsection{lstlisting 示例}
 	\begin{figure*}[!htbp]
 		\centering
-		\begin{lstlisting}[language={[LaTeX]TeX},caption={\LaTeX{} 代码实例},label={lst:1},escapechar=\%]
-		\begin{lstlisting}[language={[LaTeX]TeX},caption={\LaTeX{} 代码},label={lst:2}]
-		\begin{figure}[!htbp]
+	\begin{lstlisting}[language={[LaTeX]TeX},caption={\LaTeX{} 代码实例},label={lst:1},escapechar=\%]
+\begin{lstlisting}[language={[LaTeX]TeX},caption={\LaTeX{} 代码},label={lst:2}]
+	\begin{figure}[!htbp]
 		\centering\kaishu
 		春江花月夜~~张若虚\\
 		春江潮水连海平，海上明月共潮生。\\
@@ -232,15 +268,15 @@
 		江水流春去欲尽，江潭落月复西斜。\\
 		斜月沉沉藏海雾，碣石潇湘无限路。\\
 		不知乘月几人归，落月摇情满江树。\\
-		\end{figure}
-		\end{%\verb|lstlisting|%}
-		\end{lstlisting}
+	\end{figure}
+\end{%\verb|lstlisting|%}
+	\end{lstlisting}
 		如果在本模板中运行代码~\ref{lst:1}, 将会得到代码~\ref{lst:2}.
 	\end{figure*}
 	\begin{figure*}[!htbp]
 		\centering
 		\begin{lstlisting}[language={[LaTeX]TeX},caption={\LaTeX{} 代码},label={lst:2}]
-		\begin{figure}[!htbp]
+	\begin{figure}[!htbp]
 		\centering\kaishu
 				春江花月夜~~张若虚\\
 		春江潮水连海平，海上明月共潮生。\\
@@ -261,7 +297,7 @@
 		江水流春去欲尽，江潭落月复西斜。\\
 		斜月沉沉藏海雾，碣石潇湘无限路。\\
 		不知乘月几人归，落月摇情满江树。\\
-		\end{figure}
+	\end{figure}
 		\end{lstlisting}
 		如果在本模板中运行代码~\ref{lst:2},则会得到图~\ref{fig:poem}.
 	\end{figure*}

@@ -1,9 +1,9 @@
 % !TeX program = xelatex
 % !TeX encoding = UTF-8
-\documentclass{JXUSTmodeling}
+\documentclass[timesfont]{JXUSTmodeling}
 
 %\bibliographystyle{plain}
-\renewcommand*{\lstlistingname}{代码}
+%\renewcommand*{\lstlistingname}{代码}
 
 \title{江西理工大学数学建模 \LaTeX{} 模板}
 
@@ -19,7 +19,9 @@
 \begin{document}
 	\maketitle
 	
-	\section*{摘\qquad{}要}
+	\phantomsection
+	\addcontentsline{toc}{section}{摘\hspace{2em}要}
+	\section*{摘\hspace{2em}要}
 	……
 	
 	\setcounter{page}{1}
@@ -45,6 +47,9 @@
 	\section{模型的评价与改进}\label{sec:6}
 	……
 	
+	
+	\phantomsection
+	\addcontentsline{toc}{section}{\refname}
 	
 	%\bibliography{reference}
 	\begin{thebibliography}{99}
