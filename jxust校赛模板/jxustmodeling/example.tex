@@ -2,7 +2,7 @@
 % !TeX encoding = UTF-8
 
 \documentclass[timesfont,no-math]{JXUSTmodeling}%设置默认英文字体为Times New Roman,但不改变数学字体设置
-%\documentclass[timesfont,bwprint]{JXUSTmodeling}%取消彩色，只使用黑色文本
+%\documentclass[timesfont,no-math,bwprint]{JXUSTmodeling}%取消彩色，只使用黑色文本
 
 %\bibliographystyle{plain}
 \renewcommand*{\lstlistingname}{代码}
@@ -212,7 +212,7 @@
 	\vfill
 
 	\section{Matlab 程序}\label{app:1}
-	\begin{matlab}
+	\begin{matlab}[]%可以添加可选参数, 与lstlisting环境用法相同
 	clc,clear,close
 	t=0:0.1:20;
 	r=exp(-0.2*t);
@@ -234,14 +234,14 @@
 	\vfill
 	\clearpage
 	
-	\section{Python 程序}\label{app:2}
-	\begin{python}
+	\section{Python 程序}\label{app:3}
+	\begin{python}[]%可以添加可选参数, 与lstlisting环境用法相同
 	for i in range(3):
 		print('The cover is not so good that I think we should redefine it!')
 	print('We have no ability to do it! We need help!')
 	\end{python}
 	
-	\section{\LaTeX{} 程序}\label{app:3}
+	\section{\LaTeX{} 程序}\label{app:2}
 	\subsection{lstlisting 示例}
 	\begin{figure*}[!htbp]
 		\centering
