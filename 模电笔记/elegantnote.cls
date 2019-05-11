@@ -75,6 +75,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{hyperref}
 \RequirePackage{xpatch}
+\RequirePackage{subcaption}
 \definecolor{winered}{rgb}{0.5,0,0}
 \definecolor{epubblue}{RGB}{1,126,218}
 \hypersetup{%

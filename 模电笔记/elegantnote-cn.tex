@@ -18,7 +18,6 @@
 \centerline{\includegraphics[width=0.25\textwidth]{logo}}
 
 \setlist[itemize]{label=$\circ$}
-
 \section{常用半导体器件}
 \subsection{基本概念}
 \begin{definition}[本征半导体]
@@ -223,7 +222,7 @@
 		\item 电流负反馈：增强输出电阻 $\to$ 减小带负载能力。
 	\end{itemize}
 \end{proposition}
-
+\subsection{方块图}
 下面我们来分析一下负反馈电路的一般情况，即方块图。
 \begin{figure}[h]
 	\centering
@@ -235,13 +234,90 @@
 \begin{equation*}
 	\dot X_\mathrm{i}'=\dot X_\mathrm{i}-\dot X_\mathrm{f}
 \end{equation*}
-\begin{definition}[放大倍数]
-	\begin{equation*}
-		\dot{A}=\frac{\dot{X}_{\mathrm{o}}}{\dot{X}_{\mathrm{i}}'}
-	\end{equation*}
-	
+\begin{definition}[基本放大电路的放大倍数]
+	\begin{equation}
+		\dot{A}=\frac{\dot{X}_{\mathrm{o}}}{\dot{X}_{\mathrm{i}}'}\label{eq:1}
+	\end{equation}
 \end{definition}
 
+\begin{definition}[反馈系数]
+	\begin{equation}
+		\dot{F}=\frac{\dot{X}_{\rm{f}}}{\dot{X}_{\rm{o}}}\label{eq:2}
+	\end{equation}
+\end{definition}
+
+\begin{definition}[负反馈放大电路的放大倍数(闭环放大倍数)]
+	\begin{equation}
+		\dot{A}_{\rm{f}}=\frac{\dot{X}_{\rm{o}}}{\dot{X}_{\rm{i}}}\label{eq:3}
+	\end{equation}
+\end{definition}
+
+\begin{definition}[电路的环路放大倍数]
+	\begin{equation}
+		\dot{A}\dot{F}=\frac{\dot{X}_{\rm{f}}}{\dot{X}_{\rm{i}}'}\label{eq:4}
+	\end{equation}
+\end{definition}
+根据公式~(\ref{eq:1})、(\ref{eq:2})、(\ref{eq:3})、(\ref{eq:4})可得
+\begin{equation}
+	\dot{A}_{\rm{f}}=\frac{\dot{A}}{1+\dot{A}\dot{F}}\label{eq:5}
+\end{equation}
+在中频带，公式~(\ref{eq:1})、(\ref{eq:2})、(\ref{eq:3})、(\ref{eq:4})、(\ref{eq:5})均为实数
+分析~(\ref{eq:5})可得
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{cl}
+		$AF>0$ & 负反馈\\
+		$AF<0,AF\ne-1$ & 正反馈\\
+		$AF=-1$ & 自激振荡\\
+		$A+F\gg1$ & 深度负反馈
+	\end{tabular}
+\end{table}
+\subsection{深度负反馈}
+根据深度负反馈定义，我们可以得出这几个结论：
+\begin{enumerate}
+	\item 深度负反馈在分析中忽略净输入量，即$\dot{X}_{\rm{i}}=\dot{X}_{\rm{f}}\label{eq:6}$。当为串联负反馈时，忽略$\dot{U}_{\rm{i}}'$，即$\dot{U}_{\rm{i}}=\dot{U}_{\rm{f}}$。当为并联负反馈时，忽略$\dot{I}_{\rm{i}}'$，即$\dot{I}_{\rm{i}}=\dot{I}_{\rm{f}}$。
+	\item 下面分析四种负反馈的反馈系数
+	\begin{enumerate}
+		\item 电压串联负反馈电路见图~\ref{tu:1}，容易得到
+		\begin{figure}[ht]
+			\centering
+			\subcaptionbox{电压串联负反馈电路\label{tu:1}}[6cm]{
+				\includegraphics[width=0.4\textwidth]{fufankui1}}
+			\subcaptionbox{电压并联负反馈电路\label{tu:2}}[6cm]{
+			    \includegraphics[width=0.4\textwidth]{fufankui2}}
+			\subcaptionbox{电流串联负反馈电路\label{tu:3}}[6cm]{
+				\includegraphics[width=0.4\textwidth]{fufankui3}}
+			\subcaptionbox{电流并联负反馈电路\label{tu:4}}[6cm]{
+				\includegraphics[width=0.4\textwidth]{fufankui4}}
+		\end{figure}
+		\begin{equation*}
+			\dot{F}_{uu}=\frac{\dot{U}_{\rm{f}}}{\dot{U}_{\rm{o}}}=\frac{R_1}{R_1+R_2}
+		\end{equation*}
+		\item 电压并联负反馈电路见图~\ref{tu:2}，容易得到
+		\begin{equation*}
+			\dot{F}_{iu}=\frac{\dot{I}_{\rm{f}}}{\dot{U}_{\rm{o}}}=-\frac{1}{R_2}
+		\end{equation*}
+		\item 电流串联负反馈电路见图~\ref{tu:3}，容易得到
+		\begin{equation*}
+			\dot{F}_{ui}=\frac{\dot{U}_{\rm{f}}}{\dot{I}_{\rm{o}}}=R_1
+		\end{equation*}
+		\item 电流并联负反馈电路见图~\ref{tu:4}，注意到电流的分流跟电阻成反比，容易得到
+		\begin{equation*}
+			\dot{F}_{ii}=\frac{\dot{I}_{\rm{f}}}{\dot{I}_{\rm{o}}}=-\frac{R_2}{R_1+R_2}
+		\end{equation*}
+	\end{enumerate}
+    \item 下面分析四种负反馈的放大倍数，注意到反复使用了~\ref{eq:6}
+    \begin{enumerate}
+    	\item 电压串联负反馈电路的放大倍数
+    	\begin{equation*}
+    		\dot{A}_{uu\rm{f}}=\frac{\dot{U}_{\rm{o}}}{\dot{U}_{\rm{i}}}\approx\frac{\dot{U}_{\rm{o}}}{\dot{U}_{\rm{f}}}=\frac{1}{\dot{F}_{uu}}=1+\frac{R_2}{R_1}
+    	\end{equation*}
+    	\item 电压并联负反馈电路的放大倍数
+    	\begin{equation*}
+    		1
+    	\end{equation*}
+    \end{enumerate}
+\end{enumerate}
 \section{信号的运算与处理}
 \section{波形的发生和信号的转换}
 \section{功率放大电路}
