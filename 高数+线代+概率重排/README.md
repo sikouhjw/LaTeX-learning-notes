@@ -16,10 +16,8 @@
 
 - 数学公式中，使用 `\ldots` 进行罗列，如果两边是操作符，用 `\cdots`
 
-- 选择题填空题大题的序号一律使用 enumerate 环境
+- 选择题填空题大题的序号一律使用 enumerate 环境，一律使用subsubsection生成
 
 - 填空题的下划线使用\underline，距离使用\hspace{<数字>pc}，示例\underline{\hspace{1pc}这是答案\hspace{1pc}}
 
-- 表格推荐使用 table+tabular 环境结合三线表：`\toprule`，`\midrule`，`\bottomrule` 制作。
-
-
+- 表格推荐使用 table+tabularx 环境结合三线表：`\toprule`，`\midrule`，`\bottomrule` 制作。

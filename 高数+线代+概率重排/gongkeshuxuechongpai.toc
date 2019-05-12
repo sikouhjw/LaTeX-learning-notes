@@ -5,20 +5,32 @@
 \contentsline {subsubsection}{\numberline {一}选择题}{2}{subsubsection.2.1.1.1}
 \contentsline {subsubsection}{\numberline {二}填空题}{2}{subsubsection.2.1.1.2}
 \contentsline {subsubsection}{\numberline {三}大题}{3}{subsubsection.2.1.1.3}
-\contentsline {subsection}{\numberline {2.1.2}2018-2019A7答案}{4}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}高数(一)期终}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}2018-2019A15}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}2018-2019A15答案}{4}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}高数(二)期中}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}2017-2018}{4}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}2017-2018答案}{4}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}2018-2019B10}{4}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}高数(二)期终}{4}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}2014-2015}{4}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}2017-2018A}{4}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}2017-2018A答案}{4}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}2017-2018B}{4}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}2017-2018B答案}{4}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}额外的练习}{4}{section.2.5}
-\contentsline {chapter}{\numberline {3}线性代数试卷汇总}{5}{chapter.3}
-\contentsline {chapter}{\numberline {4}概率统计试卷汇总}{6}{chapter.4}
+\contentsline {subsection}{\numberline {2.1.2}2018-2019A7答案}{3}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {一}选择题}{3}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {二}填空题}{4}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\numberline {三}大题}{4}{subsubsection.2.1.2.3}
+\contentsline {section}{\numberline {2.2}高数(一)期终}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}2018-2019A15}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}2018-2019A15答案}{6}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}高数(二)期中}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}2017-2018}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}2017-2018答案}{6}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}2018-2019B10}{6}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}高数(二)期终}{6}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}2014-2015}{6}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}2017-2018A}{6}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}2017-2018A答案}{6}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}2017-2018B}{6}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}2017-2018B答案}{6}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}额外的练习}{6}{section.2.5}
+\contentsline {chapter}{\numberline {3}线性代数试卷汇总}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4}概率统计试卷汇总}{8}{chapter.4}
+\contentsline {chapter}{\numberline {5}复变函数试卷汇总}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}2018-2019A}{9}{section.5.1}
+\contentsline {subsubsection}{\numberline {一}选择题(每小题 $3$ 分, 共 $15$ 分)}{9}{subsubsection.5.1.0.1}
+\contentsline {subsubsection}{\numberline {二}填空题(每小题 $3$ 分, 共 $15$ 分)}{9}{subsubsection.5.1.0.2}
+\contentsline {subsubsection}{\numberline {三}计算题(70分)}{9}{subsubsection.5.1.0.3}
+\contentsline {section}{\numberline {5.2}2018-2019A答案}{10}{section.5.2}
+\contentsline {subsubsection}{\numberline {一}选择题(每小题 $3$ 分, 共 $15$ 分)}{10}{subsubsection.5.2.0.1}
+\contentsline {subsubsection}{\numberline {二}填空题(每小题 $3$ 分, 共 $15$ 分)}{10}{subsubsection.5.2.0.2}
+\contentsline {subsubsection}{\numberline {三}计算题(70分)}{10}{subsubsection.5.2.0.3}
