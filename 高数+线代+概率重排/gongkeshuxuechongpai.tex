@@ -17,11 +17,15 @@
 \newcommand{\dd}{\,\mathrm{d}}
 \newcommand{\ii}{\mathrm{i}}
 \newcommand{\Ln}{\mathrm{Ln\,}}
+\newcommand{\Res}{\,\mathrm{Res}}
 \renewcommand{\leq}{\leqslant}
+
 \everymath{\displaystyle}
+
 \newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{3.5cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
 \newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{7cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{7cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
 \newcommand{\onech}[4]{\\(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
+
 \begin{document}
 \maketitle
 \tableofcontents
@@ -328,14 +332,41 @@
 	\end{solution}
 	
 	\item 计算积分 $\oint_{\mathrm{C}}\frac{3z+5}{z^2-z}\dd z$ 的值, 其中 $\mathrm{C}$ 为正向圆周 $|z|=\frac{1}{2}$ . ( $7$ 分)
+	\begin{solution}
+		\begin{equation*}
+			\oint_{\mathrm{C}}\frac{3z+5}{z^2-z}\dd z=2\uppi\ii\underset{z=0}{\Res}\frac{3z+5}{z(z-1)}=2\uppi\ii\left.\frac{3z+5}{z-1}\right|_{z=0}=-10\uppi\ii
+		\end{equation*}
+	\end{solution}
 	
 	\item 求函数 $\frac{1-\cos z}{z^3}$ 在有限奇点处的留数. ( $7$ 分)
+	\begin{solution}
+		对 $\cos z$ 进行洛朗展开, $\cos z=1+\sum_{n=1}^{\infty}(-1)^n\frac{z^{2n}}{(2n)!}$ , 那么 $1-\cos z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n}}{(2n)!}$
+		
+		那么 $\frac{1-\cos z}{z^3}=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-3}}{(2n)!}$ , 根据洛朗系数公式, $\underset{z=0}{\Res}\frac{1-\cos z}{z^3}=c_{-1}=\frac{1}{2}$
+	\end{solution}
 	
 	\item 求函数 $\frac{2z^2+1}{z^2+2z}$ 在有限奇点处的留数. ( $7$ 分)
+	\begin{solution}
+		\begin{equation*}
+			\underset{z=0}{\Res}\frac{2z^2+1}{z^2+2z}=\left.\frac{2z^2+1}{z+2} \right|_{z=0}=\frac{1}{2} , 
+			\underset{z=-2}{\Res}\frac{2z^2+1}{z^2+2z}=\left.\frac{2z^2+1}{z}\right|_{z=-2}=-\frac{9}{2}
+		\end{equation*}
+		
+	\end{solution}
 	
 	\item 将 $f(z)=\frac{z}{(z-2)(z-6)}$ 在 $2<|z|<6$ 内展开为洛朗级数. ( $10$ 分)
+	\begin{solution}
+		\begin{align*}
+			f(z)&=\frac{z}{4}\left( \frac{1}{z-6}-\frac{1}{z-2}\right) =\frac{z}{4}\left( -\frac{1}{6}\frac{1}{1-z/6}-\frac{1}{z}\frac{1}{1-2/z}\right) \\
+			&=\frac{z}{4}\left( -\frac{1}{6}\sum_{n=0}^{\infty}(z/6)^n-\frac{1}{z}\sum_{n=0}^{\infty}(2/z)^n\right)\\
+			&=-\frac{1}{4}\left( \sum_{n=0}^{\infty}(z/6)^{n+1}+\sum_{n=0}^{\infty}(2/z)^n\right)  
+		\end{align*}
+	\end{solution}
 	
 	\item 若函数 $f(z)=a y^{3}+b x^{2} y+\ii\left(x^{3}+c x y^{2}\right)$ 是复平面上的解析函数， 求 $a,b,c$ 的值. ( $12$ 分)
+	\begin{solution}
+		若 $f(z)$ 为解析函数
+	\end{solution}
 	
 	\item 利用拉普拉斯变换解常微分方程初值问题: $\begin{cases}
 	x''(t)+6x'(t)+9x(t)=\ee^{-3t}\\
