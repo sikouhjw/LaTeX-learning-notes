@@ -147,7 +147,7 @@
 	\vskip 3em%
 	\includegraphics[width=0.3\textwidth]{\@logo}
 	\vskip 3em
-	{\zihao{4}
+	{\zihao{-4}
  	 \lineskip .75em%
 	  \begin{tabular}[t]{cc}
 		队员 1:\hspace{3pt}\uline{\makebox[5em][c]{\@authorone}}		&
