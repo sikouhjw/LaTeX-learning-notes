@@ -1,6 +1,6 @@
 \documentclass{ctexart}
-\usepackage{amsmath,ctex,caption,multirow,hyperref,newfloat}
-\usepackage[a4paper,left=2.5cm,right=2.5cm,top=0cm,bottom=0cm]{geometry}
+\usepackage{amsmath,ctex,caption,multirow,hyperref,newfloat,tabularx,makecell}
+\usepackage[a4paper,left=1cm,right=1cm,top=0cm,bottom=0cm]{geometry}
 \renewcommand{\rm}{\,\mathrm}
 \DeclareFloatingEnvironment[within=section]{表}
 \hypersetup{
@@ -16,7 +16,7 @@
 	\tt{数据仅作学习参考用途，用作实验报告后果自负。}
 	\section{模拟电子技术实验数据}
 	\subsection{模电实验一\quad 常用电子仪器使用练习}
-	\begin{表}[h]
+	\begin{table}[h]
 		\centering
 		\caption{万用表、示波器测量电压实验数据}
 		\begin{tabular}{|c|c|c|c|c|c|}
@@ -28,8 +28,8 @@
 			示波器读数 & & & & &\\
 			\hline
 		\end{tabular}
-	\end{表}
-    \begin{表}[h]
+	\end{table}
+    \begin{table}[h]
     	\centering
     	\caption{示波器测量电压实验数据}
     	\begin{tabular}{|c|c|c|c|c|}
@@ -41,8 +41,8 @@
     		频率 $f$ & $1000\rm{Hz}$ & $4\rm{div}$ & $0.25\rm{ms/div}$ & $1\rm{Hz}$\\
     		\hline
     	\end{tabular}
-    \end{表}
-    \begin{表}[h]
+    \end{table}
+    \begin{table}[h]
     	\centering
     	\caption{交流电压测量}
     	\begin{tabular}{|c|c|c|c|c|c|}
@@ -60,10 +60,10 @@
     		 $10\rm{kHz}$ & $99.92\times10^{-3}$ & $10.01\times10^3$ & $0.571$ & $2.56$ & $0.905$\\
     		 \hline
     	\end{tabular}
-    \end{表}
+    \end{table}
 
     \subsection{模电实验二\quad 共射单管交流放大电路}
-    \begin{表}[h]
+    \begin{table}[h]
     	\centering
     	\caption{静态工作点测试表}
     	\begin{tabular}{|c|c|c|c|c|c|c|}
@@ -75,8 +75,8 @@
     		$0.642$ & $5.07$ & $0$ & $687$ & & &\\
     		 \hline
     	\end{tabular}
-    \end{表}
-    \begin{表}[h]
+    \end{table}
+    \begin{table}[h]
     	\centering
     	\caption{电压放大倍数测试表}
     	\begin{tabular}{|c|c|c|}
@@ -94,8 +94,8 @@
     		$20$ & $3.671$ & \\
     		\hline
     	\end{tabular}
-    \end{表}
-    \begin{表}[h]
+    \end{table}
+    \begin{table}[h]
     	\centering
     	\caption{电路参数变化对电压放大倍数及输出波形的影响}
     	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
@@ -115,16 +115,51 @@
     		变大 & \multicolumn{2}{|c|}{$R_{\rm{L}}=\infty$} & $5.26$ & $3.20$ & 略 & & & & \\
     		\hline
     	\end{tabular}
-    \end{表}
-    %\newpage\newpage
+    \end{table}
+    \subsection{模电实验四\quad 差动放大电路}
+    \begin{table}[ht]
+    	\centering
+    	\caption{静态工作点记录表}
+    	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    		\hline
+    		\multirow{2}*{测量值} & $U_{\rm{c}1}/\rm{V}$ & $U_{\rm{B}1}/\rm{V}$ & $U_{\rm{E}1}/\rm{V}$ & $U_{\rm{c}2}/\rm{V}$ & $U_{\rm{B}2}/\rm{V}$ & $U_{\rm{E}2}/\rm{V}$ & $U_{\rm{R}_{e1}}/\rm{V}$\\
+    		\cline{2-8}
+    		 & $6.98$ & $0$ & $-0.609$ & $7.03$ & $0$ & $-0.607$ & $11.24$\\
+    		 \hline
+    	\end{tabular}
+    \end{table}
+    \begin{table}[ht]
+    	\centering
+    	\caption{电压放大倍数测量记录表}
+    	\begin{tabular}{*{14}{|c}}
+    		\hline
+    		\multirowcell{3}{测量及计\\算值输入\\信号 $/\rm{V}$} & \multicolumn{6}{|c|}{差模输入} & \multicolumn{6}{|c|}{共模输入} & 共模抑制比\\
+    		\cline{2-14}
+    		 & \multicolumn{3}{|c|}{测量值} & \multicolumn{3}{|c|}{计算值} & \multicolumn{3}{|c|}{测量值} & \multicolumn{3}{|c|}{计算值} & 计算值\\
+    		 \cline{2-14}
+    		 & $V_{\rm{c}1}$ & $V_{\rm{c}2}$ & $V_{\rm{o}\text{双}}$ & $A_{\rm{d}1}$ & $A_{\rm{d}2}$ & $A_{\text{双}}$ & $V_{\rm{c}1}$ & $V_{\rm{c}2}$ & $V_{\rm{o}\text{双}}$ & $V_{\rm{c}1}$  & $V_{\rm{c}2}$ & $V_{\text{双}}$ & $KCMR=|A_{\rm{d}}/A_{\rm{c}}|$\\
+    		 \hline
+    		 \multirowcell{2}{$V_{\rm{i}1}=+0.04$ \\ $V_{\rm{i}2}=-0.04$} & $6.57$ & $7.40$ & $-0.83$ &  &  &  &  $6.96$ & $6.97$ & $-0.004$ & & & &  \\
+    		 \cline{2-14}
+    		  & & & & & & & & & & & & & \\
+    		  \hline
+    		  \multirowcell{2}{$V_{\rm{i}1}=+0.12$\\$V_{\rm{i}2}=-0.12$} & $5.73$ & $8.14$ & $-2.394$ &  &  &  & $6.88$ & $6.92$ & $-0.001$ &  &  &  &  \\
+    		  \cline{2-14}
+    		  
+    	\end{tabular}
+    \end{table}
+    
+    
+    
+    \newpage
     \section{数字电子技术实验数据}
     \subsection{数电实验一\quad 门电路}
-    \begin{表}[h]
+    \begin{table}[h]
     	\centering
     	\caption{$\rm{TTL}$ 基本门电路测试表}
     	\begin{tabular}{|c|c|c|c|c|}
     		\hline
-    		\multicolumn{2}{|c|}{输入} & \multicolumn{3}{|c|}{输出}\\
+    		\multicolumn{2}{|c}{输入} & \multicolumn{3}{|c|}{输出}\\
     		\hline
     		$A$ & $B$ & 与非门$Y$ & 或门$Y$ & 异或门$Y$\\
     		\hline
@@ -137,8 +172,8 @@
     		$1$ & $1$ & $0$ & $1$ & $0$\\
     		\hline
     	\end{tabular}
-    \end{表}
-    \begin{表}[h]
+    \end{table}
+    \begin{table}[h]
     	\centering
     	\caption{$\rm{TTL}$四输入端双与非门测试表}
     	\begin{tabular}{|c|c|c|c|c|c|}
@@ -158,8 +193,8 @@
     		$0$ & $0$ & $0$ & $0$ & $1$ & $4.40$\\
     		\hline
     	\end{tabular}
-    \end{表}
-    \begin{表}[h]
+    \end{table}
+    \begin{table}[h]
     	\centering
     	\caption{$\rm{TTL}$与非门的电压传输特性测试表}
     	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -169,10 +204,10 @@
     		$V_{\mathrm{o}}/\rm{V}$ & $4.85$ & $4.85$ & $4.85$ & $2.30$ & $0.02$ & $0.02$ & $0.02$ & $0.02$\\
     		\hline
     	\end{tabular}
-    \end{表}
+    \end{table}
 
     \subsection{数电实验二\quad 译码器}
-    \begin{表}[h]
+    \begin{table}[h]
     	\centering
     	\caption{$74\rm{LS}138$的逻辑功能测试表}
     	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -204,8 +239,8 @@
     		1 & 0 & 1 & 1 & 1 & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $0$\\
     		\hline
     	\end{tabular}
-    \end{表}
-    \begin{表}
+    \end{table}
+    \begin{table}
     	\centering
     	\caption{74LS48逻辑功能测试表}
     	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
@@ -235,5 +270,5 @@
     		$1$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$\\
     		\hline
     	\end{tabular}
-    \end{表}
+    \end{table}
 \end{document}

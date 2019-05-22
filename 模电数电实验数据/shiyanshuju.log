@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.18)  30 APR 2019 16:51
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.18)  22 MAY 2019 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,25 +1270,52 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (c:/texlive/2018/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
+(c:/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+
+(c:/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen196
+\ar@mcellbox=\box54
+\extrarowheight=\dimen197
+\NC@list=\toks22
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box55
+)
+\TX@col@width=\dimen198
+\TX@old@table=\dimen199
+\TX@old@col=\dimen256
+\TX@target=\dimen257
+\TX@delta=\dimen258
+\TX@cols=\count290
+\TX@ftn=\toks23
+)
+(c:/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen259
+\c@nlinenum=\count291
+\TeXr@lab=\toks24
+)
 (c:/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
-\Gm@cnth=\count290
-\Gm@cntv=\count291
-\c@Gm@tempcnt=\count292
-\Gm@bindingoffset=\dimen196
-\Gm@wd@mp=\dimen197
-\Gm@odd@mp=\dimen198
-\Gm@even@mp=\dimen199
-\Gm@layoutwidth=\dimen256
-\Gm@layoutheight=\dimen257
-\Gm@layouthoffset=\dimen258
-\Gm@layoutvoffset=\dimen259
-\Gm@dimlist=\toks22
+\Gm@cnth=\count292
+\Gm@cntv=\count293
+\c@Gm@tempcnt=\count294
+\Gm@bindingoffset=\dimen260
+\Gm@wd@mp=\dimen261
+\Gm@odd@mp=\dimen262
+\Gm@even@mp=\dimen263
+\Gm@layoutwidth=\dimen264
+\Gm@layoutheight=\dimen265
+\Gm@layouthoffset=\dimen266
+\Gm@layoutvoffset=\dimen267
+\Gm@dimlist=\toks25
 )
 Package newfloat Info: New float `表' with options `within=section' on input lin
 e 5.
-\c@表=\count293
-\newfloat@ftype=\count294
+\c@表=\count295
+\newfloat@ftype=\count296
 Package newfloat Info: float type `表'=8 on input line 5.
 
 
@@ -1381,7 +1408,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box54
+\AtBeginShipoutBox=\box56
 Package hyperref Info: Link coloring OFF on input line 14.
 
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1390,7 +1417,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count295
+\c@section@level=\count297
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
@@ -1409,14 +1436,14 @@ LaTeX Info: Redefining \nameref on input line 14.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
 * v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
+* \textwidth=540.60239pt
 * \textheight=845.04684pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
 * \topmargin=-109.26999pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -1435,7 +1462,7 @@ LaTeX Info: Redefining \nameref on input line 14.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\g__fontspec_family_FangSong_int=\count296
+\g__fontspec_family_FangSong_int=\count298
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1468,16 +1495,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.53937pt
 (hyperref)                replaced by space on input line 18.
 
-Package hyperref Info: bookmark level for unknown 表 defaults to 0 on input line
- 21.
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 22.
-
-
-Overfull \hbox (3.48036pt too wide) in paragraph at lines 48--63
- [][] 
- []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1496,7 +1516,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.53937pt
-(hyperref)                replaced by space on input line 121.
+(hyperref)                replaced by space on input line 119.
+
+
+Overfull \hbox (14.24995pt too wide) in paragraph at lines 134--149
+ [][] 
+ []
+
+[1
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.53937pt
+(hyperref)                replaced by space on input line 155.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1510,40 +1543,37 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.53937pt
-(hyperref)                replaced by space on input line 174.
+(hyperref)                replaced by space on input line 208.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
-[1
-
-]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not avail
 able
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-239.
- [2] [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
+273.
+[2] [3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
  (./shiyanshuju.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 239.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 273.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
 Package rerunfilecheck Info: File `shiyanshuju.out' has not changed.
-(rerunfilecheck)             Checksum: D0F6F335B624F9A9A54D31B6C3719E55.
+(rerunfilecheck)             Checksum: 605714C8751A18D5254506486A9A2B1A.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 239.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
  ) 
 Here is how much of TeX's memory you used:
- 23831 strings out of 492970
- 485723 string characters out of 6137298
- 599162 words of memory out of 5000000
- 27640 multiletter control sequences out of 15000+600000
- 535958 words of font info for 69 fonts, out of 8000000 for 9000
+ 24081 strings out of 492970
+ 488596 string characters out of 6137298
+ 594989 words of memory out of 5000000
+ 27878 multiletter control sequences out of 15000+600000
+ 535974 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 53i,11n,68p,10477b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,19n,68p,10495b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on shiyanshuju.pdf (3 pages).
+Output written on shiyanshuju.pdf (4 pages).
