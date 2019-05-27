@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{JXUSTmodeling}[2019/05/01 version 1.0]
+\ProvidesClass{JXUSTmodeling}[2019/05/27 version 1.1]
 
 \newif\if@bwprint\@bwprintfalse
 \newif\if@timesfont\@timesfontfalse
@@ -30,7 +30,7 @@
 \newcommand*{\ii}{\mathrm{i}}
 
 %载入表格宏包和插图宏包
-\RequirePackage{booktabs,tabularx}
+\RequirePackage{booktabs,tabularx,multirow,longtable}
 \RequirePackage{array}
 \RequirePackage{graphicx}
 \RequirePackage{caption}
@@ -62,7 +62,7 @@
 %载入代码宏包
 \RequirePackage{listings}
 %设置代码的默认样式
-\lstset{	%调用Matlab的默认颜色设置,
+\lstset{
 	frame=none,%取消边框
 	breaklines=true,%允许自动断行
 	%breakatwhitespace=true,%使用此命令仅允许在空格处自动断行
@@ -108,7 +108,7 @@
 	section={%设置 section 格式
 		format={\zihao{4}\heiti\centering},%4号黑体字居中
 		name={,、},%序号后跟顿号
-		aftername={\hspace{5pt}},%修改序号和标题直接的间距
+		aftername={\hspace{0pt}},%修改序号和标题直接的间距
 		number=\chinese{section},%设置序号为中文
 		%beforeskip=30pt,%设置章节标题前的垂直间距
 		%fixskip=true,
@@ -118,9 +118,13 @@
 	subsection={%设置 subsection 格式
 		format={\zihao{-4}\songti\raggedright},%小4号宋体居左
 		name={},
+        aftername={\hspace{5bp}},%修改序号和标题直接的间距
 		number={\arabic{section}.\arabic{subsection}},	%设置序号格式
 	},
-	appendix/name={附\hspace{1em}录},%在附录序号前添加 "附 录"
+	appendix={
+        name={附录,：},%在附录序号前添加 "附录"
+        number=\chinese{section},
+    }
 }
 
 \if@timesfont
@@ -143,7 +147,7 @@
 \null\vfil
 \vskip 40\p@ \let \footnote \thanks
 \begin{center}%
-	{\heiti\zihao{3} 题目: \underline{\hspace{3em}\@title\hspace{3em}} \par}%
+	{\heiti\zihao{3} 题目: \underline{\hspace{1em}\@title\hspace{1em}} \par}%
 	\vskip 3em%
 	\includegraphics[width=0.3\textwidth]{\@logo}
 	\vskip 3em
@@ -196,6 +200,4 @@
 %载入超链接宏包
 \RequirePackage{hyperref}
 \hypersetup{breaklinks,colorlinks}%允许超链接断行,取消超链接的边框,使链接文字带颜色
-\if@bwprint
-\hypersetup{hidelinks}%取消超链接的颜色
-\fi
+\hypersetup{hidelinks,bookmarksnumbered=true,bookmarksopen=true,pdfstartview=Fit}%取消超链接的颜色，书签目录增加编号

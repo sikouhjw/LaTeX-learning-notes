@@ -8,7 +8,7 @@
 
 \title{江西理工大学数学建模 \LaTeX{} 模板}
 
-
+%\everymath{\displaystyle}
 \authorone{队员1}
 \authoroneclass{专业1}
 \authortwo{队员2}
@@ -21,11 +21,13 @@
 	\maketitle
 	
 	\phantomsection
-	\addcontentsline{toc}{section}{摘\hspace{2em}要}
-	\section*{摘\hspace{2em}要}
+	\addcontentsline{toc}{section}{摘\hspace{24bp}要}
+	\section*{摘\hspace{24bp}要}
 	……
 	
 	\setcounter{page}{1}
+	
+	\vphantom{1}
 	
 	\noindent {\bfseries 关键词} \quad ……
 	\newpage
@@ -49,14 +51,19 @@
 	……
 	
 	
+	
+	\newpage
 	\phantomsection
-	\addcontentsline{toc}{section}{\refname}
+	\addcontentsline{toc}{section}{参考文献}
 	
 	%\bibliography{reference}
 	\begin{thebibliography}{99}
 	\bibitem{...}……
 	\end{thebibliography}
-	
+	\newpage
+	\ctexset{section={
+			format={\zihao{4}\heiti\raggedright},
+	}}
 	\appendix
 	
 	\section{Matlab 程序}\label{app:1}
