@@ -1,0 +1,36 @@
+\documentclass[tikz,border=2pt,UTF8]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
+\usepackage{pgfornament}
+\usetikzlibrary{calc}
+\begin{document}
+\centering
+
+\begin{tikzpicture}    
+    \node (a) at (5,4) {};
+    \node (b) at (5,0) {};
+    \draw (0,4) -- (a);
+    \draw (0,0) -- (b);
+    \draw (b) -- (5,1.5);
+    \draw (5,2.5) -- (a);
+    \draw (2,3.5) -- (2,4.5);
+    \draw (2.5,3.5) -- (2.5,4.5);
+    \draw (2,3.5) -- (2.5,4);
+    \draw (2,4.5) -- (2.5,4);
+    \draw (5,4) circle (0.12);
+    \draw (5,0) circle (0.12);
+    \draw (4.8,1.5) rectangle (5.2,2.5);
+
+    \node[above=9pt] at (2.3,4) {$D$};
+    \node[below=12pt] at (2.3,4) {$u_D$};
+    \node[below=12pt] at (1.8,4) {$+$};
+    \node[below=12pt] at (2.8,4) {$-$};
+    \node[right=6pt] at (5,4) {$+$};
+    \node[right=6pt] at (5,0) {$-$};
+    \node[left=6pt] at (5,2) {$R_{\mathrm{L}}$};
+    \node[right=6pt] at (5,2) {$u_{\mathrm{O}}$};
+\end{tikzpicture}
+\end{document} 

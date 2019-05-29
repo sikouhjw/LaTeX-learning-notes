@@ -1,0 +1,32 @@
+\documentclass[tikz,border=2pt,UTF8]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
+\usepackage{pgfornament}
+\usetikzlibrary{calc}
+\begin{document}
+\centering
+
+\begin{tikzpicture}
+    \draw (0,0) rectangle (4,3);
+    \node at (2,1.5) {电源变压器};
+    \draw (6,0) rectangle (10,3);
+    \node at (8,1.5) {整流电源};
+    \draw (12,0) rectangle (16,3);
+    \node at (14,1.5) {滤波电路};
+    \draw (18,0) rectangle (22,3);
+    \node at (20,1.5) {稳压电路};
+
+    \draw (-2,1.5) sin (-1.5,2.5) cos (-1,1.5);
+    \draw (-1,1.5) sin (-0.5,0.5) cos (0,1.5);
+    \draw (4,1.5) sin (4.5,2) cos (5,1.5);
+    \draw (5,1.5) sin (5.5,1) cos (6,1.5);
+    \draw (10,1.5) sin (10.5,2) cos (11,1.5);
+    \draw (11,1.5) sin (11.5,2) cos (12,1.5);
+    \draw (16,1.5) sin (16.5,1.6) cos (17,1.5);
+    \draw (17,1.5) sin (17.5,1.6) cos (18,1.5);
+    \draw (22,1.5) -- (24,1.5);
+\end{tikzpicture}
+\end{document} 
