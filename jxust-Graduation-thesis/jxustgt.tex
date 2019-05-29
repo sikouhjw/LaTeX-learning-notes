@@ -1,0 +1,32 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+
+\documentclass{jxustgt}
+\usepackage[titles]{tocloft}
+\renewcommand{\cftdot}{$\cdot$}
+\renewcommand{\cftdotsep}{1.5}
+\setlength{\cftbeforechapskip}{10pt}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\makeatletter
+\renewcommand{\numberline}[1]{%
+\settowidth\@tempdimb{#1\hspace{0.5em}}%
+\ifdim\@tempdima<\@tempdimb%
+  \@tempdima=\@tempdimb%
+\fi%
+\hb@xt@\@tempdima{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
+\makeatother
+\title{本科学位论文模板示例}
+\author{死抠}
+%\institute{\LaTeX{}学院}
+
+
+\begin{document}
+	\maketitle
+	\tableofcontents\newpage
+	\section{1}
+	\subsection{11}
+	1
+	\section{2}
+\end{document}
