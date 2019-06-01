@@ -1,0 +1,108 @@
+\usepackage[margin=2cm,left=2.5cm]{geometry}%设置页面布局
+
+\setmainfont{Times New Roman}%设置英文衬线字体为 Times New Roman，文章中主要使用的字体
+
+% \setCJKmainfont{Source Han Serif SC}%设置中文衬线字体，文章中主要使用的字体
+%粗体和斜体都是对英文字体而言的，中文字体一般没有对应的粗体和斜体。
+%在 Windows 系统下，xetex 引擎默认调用中易字库 + 微软雅黑字体（见 ctex 宏包），
+%默认在正文中使用中易宋体，即 word 中的宋体，
+%该字体没有对应的粗体和斜体，只能通过使用伪粗来达到加粗的效果，word 的加粗就是这样。
+%所以这里不使用中易宋体，改用思源宋体。思源宋体有不同的粗细，可以来表示对应的粗体，
+%所以这里使用思源宋体。思源宋体需要自行安装。下载链接
+% https://github.com/adobe-fonts/source-han-serif
+%右键安装或者复制到字体文件夹中。
+
+%以下代码配置：使用中易宋体为默认字体，中易黑体为粗体，楷体为斜体。楷体可能是叫中易楷体。
+\setCJKmainfont[ItalicFont={KaiTi},BoldFont={SimHei}]{SimSun}
+%用 \bfseries 使用中易黑体，\itshape 使用楷体。
+
+%以下代码配置：使用伪粗来表示对应的粗体。
+\xeCJKsetup{EmboldenFactor={1}}%设置伪粗体的默认粗细程度，不加粗为 0，默认为 4。
+\setCJKfamilyfont{Kai}[AutoFakeBold]{KaiTi}
+\newcommand*{\kai}{\CJKfamily{Kai}}%之后可以使用 \bfseries\kai 使用伪粗楷体。
+\setCJKfamilyfont{Song}[AutoFakeBold]{SimSun}
+\newcommand*{\song}{\CJKfamily{Song}}%之后可以使用 \bfseries\song 使用伪粗中易宋体。
+
+\usepackage[titles]{tocloft}%用于设置目录格式的宏包
+
+%设置目录
+%重定义目录标题格式，使目录以三号粗体居中，中间空两个小 4 号字体的间距。
+\renewcommand{\contentsname}{\hfill\zihao{3} {\bfseries 目\hspace{24bp}录}\hspace*{\fill}}
+%设置目录引导符，（我叫它引导符）
+\renewcommand{\cftdot}{$\cdot$}%设置引导符为 $\cdot$
+\renewcommand{\cftdotsep}{1}%设置引导符间距
+\renewcommand{\cftsecleader}{\cftdotfill{1}}%为目录中的 section 添加引导符
+%设置目录字体和缩进
+\renewcommand{\cftsecfont}{\bfseries}%设置目录中的 section 字体为粗体。
+\cftsetindents{section}{-24bp}{12bp}%修正 \ctexset 中设置标题产生的缩进
+\cftsetindents{subsection}{0bp}{12bp}%修正 \ctexset 中设置标题产生的缩进
+\cftsetindents{subsubsection}{0bp}{12bp}%修正 \ctexset 中设置标题产生的缩进
+
+
+\setlength{\cftbeforesecskip}{0pt}%目录中 section 之前默认有额外的间距，让这个间距的值为 0。
+
+%设置正文中的标题格式，具体效果见 ctex 宏包，不想写了。。。
+%毕竟 ctex 宏包应该都看过了。
+\ctexset{
+    section={
+        number={\chinese{section}},
+        format={\raggedright\bfseries\zihao{4}},
+        name={\hspace{24bp},},
+        % aftername={},
+        afterskip=0pt,
+        beforeskip=6bp,
+    },
+    subsection={
+        number={\arabic{section}.\arabic{subsection}},
+        name={\hspace{24bp}},
+        format={\raggedright\bfseries\zihao{4}},
+        beforeskip=0pt,
+        afterskip=0pt,
+    },
+    subsubsection={
+        number={\thesubsection.\arabic{subsubsection}},
+        name={\hspace{24bp}},
+        format={\raggedright\bfseries\zihao{-4}},
+        beforeskip=0pt,
+        afterskip=0pt
+    }
+}
+
+
+
+
+
+\usepackage{graphicx}%插图宏包
+\graphicspath{{figures/}}%设置图片路径。
+
+%定义封面样式
+\renewcommand{\maketitle}{\begin{titlepage}
+    \vspace*{\fill}%和后面的 \vspace*{\fill} 一起，使内容垂直居中。
+    \centering%使内容水平居中。
+    \includegraphics[width=0.7\paperwidth]{logo.jpg}\\%插入图片
+    \vspace{12bp}\kai %使用楷体
+    {\zihao{3}\bfseries 《毛泽东思想和中国特色社会主义理论体系概论》}\\ %课程名：毛概。
+    \vspace{24bp}
+    {\bfseries\zihao{2} 实\\[12bp] 践\\[12bp] 报\\[12bp] 告\\[12bp] }
+    \vspace{24bp}
+    \hspace*{72bp}%让 minipage 的内容靠右一点，建议看自己需要调整过。
+    \begin{minipage}{12cm}
+        \zihao{4}
+        时间：\today\\
+        实践题目：江西理工大学校园网络文化建设调查与分析\\
+        组长：\hspace{2bp} \mbox{。。。 \quad 。。。}\\
+        组员：\hspace{2bp} \parbox[t]{10cm}{。。。\quad 其他内容 。。。 \\
+                。。。\quad 其他内容 。。。\\
+                。。。\quad 其他内容 。。。\\
+                。。。\quad 其他内容 。。。 }\\[12bp]
+        专业班级：。。。。。。。。。\\
+        评分：
+    \end{minipage}
+    \vspace*{\fill}%和前面的 \vspace*{\fill} 一起，使内容垂直居中。
+\end{titlepage}}
+
+
+
+\linespread{1.5}%设置行距为 1.5 倍。
+
+\pagestyle{plain}%设置页眉页脚格式，无页眉，页码居中放在页脚。
