@@ -901,9 +901,23 @@ INPUT ./image/tu6.pdf
 INPUT ./image/tu6.pdf
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong6c.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong71.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei80.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei8b.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei91.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei70.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong70.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong6a.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong74.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong72.tfm
+INPUT c:/texlive/2018/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong88.tfm
 INPUT d:/git/LaTeX-learning-notes/Die electricity notes/Die electricity notes.aux
 INPUT d:/git/LaTeX-learning-notes/Die electricity notes/Die electricity notes.out
 INPUT d:/git/LaTeX-learning-notes/Die electricity notes/Die electricity notes.out
+INPUT c:/Windows/Fonts/simsun.ttc
+INPUT c:/Windows/Fonts/simsun.ttc
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simsun.ttc

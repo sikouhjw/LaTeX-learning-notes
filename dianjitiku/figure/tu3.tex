@@ -1,0 +1,45 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
+\usepackage{pgfornament}
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=figures/]
+
+\usetikzlibrary{calc}
+\begin{document}
+\centering
+
+\begin{tikzpicture}
+    \draw (0,5) -- (8,5);
+    \draw (0,0) -- (2,0);
+    \draw (2,0) -- (2.5,-0.5);
+    \node at (0,2.5) {$P_{1}$};
+
+    \draw (2.5,0.5) -- (3.5,-0.5);
+    \draw (2.5,0.5) -- (3,0.5);
+    \draw (3,0.5) -- (3.5,0);
+    \node at (3,-0.5) {$P_{\mathrm{Cu}1}$};
+
+    \draw (3.5,1) -- (4.5,0);
+    \draw (3.5,1) -- (4,1);
+    \draw (4,1) -- (4.5,0.5);
+    \node at (4,0) {$P_{\mathrm{Fe}}$};
+
+    \node at (3.75,1.25) {$P_{\mathrm{em}}$};
+
+    \draw (4.5,1.5) -- (5.5,0.5);
+    \draw (4.5,1.5) -- (5,1.5);
+    \draw (5,1.5) -- (5.5,1);
+    \node at (5,0.5) {$P_{\mathrm{Cu}2}$};
+
+    \draw (6.5,2) -- (7.5,1);
+    \draw (6.5,2) -- (7,2);
+    \draw (7,2) -- (8,2);
+    \node at (6.5,1) {$P_{\mathrm{mec}}+P_{\mathrm{ad}}$};
+
+    \node at (8,3.5) {$P_2$};
+\end{tikzpicture}
+\end{document} 
