@@ -121,6 +121,12 @@
         aftername={\hspace{5bp}},%修改序号和标题直接的间距
 		number={\arabic{section}.\arabic{subsection}},	%设置序号格式
 	},
+	subsubsection={%设置 subsubsection 格式
+		format={\zihao{-4}\songti\raggedright},%小4号宋体居左
+		name={},
+        aftername={\hspace{5bp}},%修改序号和标题直接的间距
+		number={\arabic{section}.\arabic{subsection}.\arabic{subsubsection}},	%设置序号格式
+	},
 	appendix={
         name={附录,：},%在附录序号前添加 "附录"
         number=\chinese{section},
