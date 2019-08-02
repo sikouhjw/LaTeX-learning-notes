@@ -10,6 +10,17 @@
 %设置纸张为A4纸,行距为1.25倍,设置默认字号为小4
 \LoadClass[oneside,a4paper,UTF8,linespread=1.25,zihao=-4]{ctexart}
 
+%设置图片、表格前缀
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+% 浮动环境设置默认情况下, \LaTeX{} 要求每页的文字至少占据 20%,否则该页就只单独放置一个浮动环境,而这通常不是我们想要的, 我们将这个要求降低到 5%.
+\renewcommand*{\textfraction}{0.05}
+% 有时如果多个浮动环境连续放在一起, \LaTeX{}会将它们分在几个不同页，即使它们可在同一页放得下. 我们可以通过修改 |\topfraction| 和 |\bottomfraction| 分别设置顶端和底端的浮动环境的最大比例.
+ \renewcommand*{\topfraction}{0.9}
+ \renewcommand*{\bottomfraction}{0.8}
+% 有时\LaTeX{}会把一个浮动环境单独放在一页,我们要求这个环境至少要占据 85% 才能单独放在一页.注意:  |\floatpagefraction| 的数值必须小于 |\topfraction|.
+ \renewcommand*{\floatpagefraction}{0.85}
+
 %设置页面边距
 \RequirePackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
 
@@ -36,7 +47,8 @@
 \RequirePackage{caption}
 
 \captionsetup{format=hang}%设置浮动体标题悬挂缩进
-
+\captionsetup[figure]{labelsep=quad}
+\captionsetup[table]{labelsep=quad}
 %定义居中的X列格式
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
